@@ -98,7 +98,7 @@ const MarketCarPages = () => {
         </chakra.h1>
         <C.HStack>
           {celulares.map(celular =>(
-            <Card maxW='sm'>
+            <Card key={celular.id} maxW='sm'>
               <C.CardBody>
                 <C.Image
                   src={celular.imgCelular}
@@ -140,7 +140,7 @@ const MarketCarPages = () => {
       <C.Heading>Carrinho de compras - R${totalCelular}</C.Heading>
 
         <C.VStack>
-        {shoppingCelular.map((item) =>(<Card
+        {shoppingCelular.map((item) =>(<Card key={item.produto.id}
             direction={{ base: 'column', sm: 'row' }}
             overflow='hidden'
             variant='outline'
